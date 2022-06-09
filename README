@@ -1,0 +1,30 @@
+																		README
+
+														Tema 2 PC					Robert-Andrei Raucescu 325CB
+
+	Am folosit pentru rezolvarea acestei teme scheletul de cod oferit in laboratorul 10. Din acestea, am pastrat doar Makefile-ul modificat de mine, functiile de compute_get_request si compute_post_request care au fost modificate pentru a accepta si tokenul JWT.
+
+De asemenea am mai inclus si libraria de parsare json parson. Am ales aceasta librarie pentru ca a fost recomandata in enuntul temei pentru rezolvarile in C.
+
+Functiile implementate:
+
+-register-> Functia afiseaza promptul pentru username si parola, transforma datele intr-un obiect json care este trimis la server.
+
+-login -> Functia afiseaza promptul pentru username si parola. Transforma datele intr-un obiect json care este trimis la server. In caz de reusita, salveaza cookieul de sesiune pentru utilizarile ulterioare.
+
+-enter_library -> Functia cere de la server acces la biblioteca, oferind ca dovada de logare cookieul salvat la login. Parseaza din raspunsul serverului tokenul JWT si il salveaza.
+
+-get_books -> Functia cere de la server un vector de obiecte json reprezentand toate cartile aflate in biblioteca.
+
+-get_book-> Functia afiseaza promptul pentru id si apoi afiseaza detaliile cartii cu id-ul respectiv, sau un mesaj de eroare in caz ca nu exista nici o carte cu acel id.
+
+-add_book -> Functia afiseaza promptul pentru toate datele unei carti si compune din acestea un obiect json pe care il trimite la server spre a fi adugat.
+
+-delete_book -> Functia afiseaza promptul pentru id, daca exista o carte cu acest id in biblioteca afiseaza un mesaj de reusita, sau unul de eroare in caz contrar.
+
+-logout -> Delogheaza utilizatorul de la server
+
+-exit -> Inchide programul
+
+
+
